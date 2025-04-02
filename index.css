@@ -1,0 +1,140 @@
+body {
+    background-image: url("station.jpg");
+    background-size: cover;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+#increment-btn {
+    background: green;
+}
+
+#save-btn {
+    background: orange;
+}
+
+#decrement-btn{
+    background: red
+}
+.number{
+    color:#000000;
+    transition: color 1s;
+}
+
+/* At this point, it is used to change the color of the number when the button is clicked and a certain count
+threshold is reached. */
+
+.blue {
+    color: #0000FF;
+}
+
+.red {
+    color: #FF0000;
+}
+  
+.green {
+    color: #00FF00;
+}
+  
+.yellow {
+    color: #FFFF00;
+}
+
+.purple{
+    color: purple;
+}
+
+.orange{
+    color :orange
+}
+
+.pink{
+    color: pink;
+}
+
+.black{
+    color: black;
+}
+
+.number.black{
+    color: black;
+}
+
+.number.red {
+    color: #FF0000;
+}
+  
+.number.green {
+    color: #00FF00;
+}
+  
+.number.blue {
+    color: #0000FF;
+}
+  
+.number.yellow {
+    color: #FFFF00;
+}
+
+.number.purple {
+    color: purple;
+}
+
+.number.pink {
+    color: pink;
+}
+
+.number.orange {
+    color: orange;
+}
+
+.roygbiv{
+    animation: roygbiv 2s infinite;
+}
+
+@keyframes roygbiv {
+    0% {
+      color: #FF0000;
+    }
+    16.67% {
+      color: #FFFF00;
+    }
+    33.33% {
+      color: #00FF00;
+    }
+    50% {
+      color: #0000FF; 
+    }
+    66.67% {
+      color: #FF00FF; 
+    }
+    83.33% {
+      color: #FFA500; 
+    }
+    100% {
+      color: #FF0000;
+    }
+}
