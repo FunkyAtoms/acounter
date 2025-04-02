@@ -43,7 +43,14 @@ function decrement(){ //decrements the number by 1
 }
 function save() { //saves the current count
     let countStr = count + " - "
-    saveEl.textContent += countStr
+    if (saveEl.textContent === "Previous Number: ") {
+        saveEl.textContent = "Previous Number: " + countStr;
+        highestNumber = parseInt(countStr);
+        document.getElementById("highest-number").textContent = "Highest Number: " + highestNumber;
+    } else {
+        saveEl.textContent += countStr;
+        updateHighestNumber();
+    }
     countEl.textContent = 0
     count = 0
     decrementcount = 0
@@ -58,12 +65,11 @@ function save() { //saves the current count
           imageElement = null;
         }, 1000);
     }
-    updateHighestNumber();
 }
 
 function updateHighestNumber() {
-    let savedNumbers = saveEl.textContent.split(" - ");
-    let highest = highestNumber;
+    let savedNumbers = saveEl.textContent.replace("Previous Number: ", "").split(" - ");
+    let highest = 0;
     for (let i = 0; i < savedNumbers.length; i++) {
         let num = parseInt(savedNumbers[i]);
         if (num > highest) {
@@ -72,6 +78,12 @@ function updateHighestNumber() {
     }
         highestNumber = highest;
         document.getElementById("highest-number").textContent = "Highest Number: " + highestNumber;
+}
+
+function reset(){
+    saveEl.textContent = "Previous Number: ";
+    highestNumber = 0;
+    document.getElementById("highest-number").textContent = "Highest Number: 0";
 }
   
 function magic(){

@@ -39,6 +39,12 @@ button {
 #decrement-btn{
     background: red
 }
+
+#reset-btn{
+    background: darkgray;
+}
+
+
 .number{
     color:#000000;
     transition: color 1s;
